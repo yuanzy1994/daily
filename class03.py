@@ -1,12 +1,20 @@
-import sys
-import os
-from os import path
+# -*-coding:utf-8-*-
+class JustCounter:
+    __secretCount = 0
+    publicCount = 0
 
+    def __init__(self):
+        pass
 
-# print sys.path
+    def count(self):
+        self.__secretCount += 1
+        self.publicCount += 1
+        print self.__secretCount
 
-# print __file__
+counter = JustCounter()
+counter.count()
+counter.count()
 
-print os.path.abspath(__file__)
-
-print os.path.dirname(os.path.abspath(__file__))
+print counter.publicCount
+# print counter.__secretCount  #私有方法 实例无法访问
+print counter._JustCounter__secretCount
