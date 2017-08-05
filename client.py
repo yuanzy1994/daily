@@ -1,6 +1,6 @@
 import  socket
 
-ip_port = ('localhost',9999)
+ip_port = ('localhost',50008)
 client = socket.socket()
 client.connect(ip_port)
 
