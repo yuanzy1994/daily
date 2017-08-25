@@ -1,5 +1,5 @@
 pipeline:
-    image: busybox
+    image: jqka/centos-7.3.1611
     script:
     - python hello.py
     - echo "Successfully!"
