@@ -1,0 +1,4 @@
+image: docker.io/jqka/busybox
+script:
+- python hello.py
+- echo "Successfully!"
