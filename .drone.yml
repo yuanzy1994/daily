@@ -1,6 +1,6 @@
 pipeline:
   build:
-    image: redis
+    image: jqka/redis
     commands:
       - redis-cli -h redis ping
       - redis-cli -h redis set FOO bar
