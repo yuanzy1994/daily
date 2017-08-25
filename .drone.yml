@@ -1,7 +1,4 @@
-pipeline:
-  build:
-    image: jqka/redis
-    commands:
-      - redis-cli -h redis ping
-      - redis-cli -h redis set FOO bar
-      - redis-cli -h redis get FOO
+image: python
+　　script:
+　　- python helloworld.py
+　　- echo "Build has been completed."
