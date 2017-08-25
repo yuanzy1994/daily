@@ -1,5 +1,5 @@
 pipeline:
-    image: docker.io/jqka/busybox
+    image: busybox
     script:
     - python hello.py
     - echo "Successfully!"
