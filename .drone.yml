@@ -1,13 +1,24 @@
 pipeline:
-  build:
+  backend:
     image: golang
     commands:
       - go get
       - go build
       - go test
 
-services:
-  postgres:
-    image: postgres:9.4.5
-    environment:
-      - POSTGRES_USER=myapp
+  frontend:
+    image: node:6
+    commands:
+      - npm install
+      - npm test
+
+  publish:
+    image: plugins/docker
+    repo: octocat/hello-world
+    tags: [ 1, 1.1, latest ]
+    registry: index.docker.io
+
+  notify:
+    image: plugins/slack
+    channel: developers
+    username: drone
