@@ -1,0 +1,15 @@
+print
+hello
+world
+wo
+qu
+ni
+er
+da
+ye
+de
+sb
+end
+world
+hello
+haha
